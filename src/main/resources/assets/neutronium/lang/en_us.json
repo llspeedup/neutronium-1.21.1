@@ -1,3 +1,7 @@
 {
-  "item.neutronium.raw_uranium": "Raw Uranium"
+  "item.neutronium.raw_uranium": "Raw Uranium",
+  "item.neutronium.unenriched_uranium": "Unenriched Uranium",
+  "item.neutronium.enriched_uranium": "Enriched Uranium",
+
+  "block.neutronium.uranium_ore": "Uranium Ore"
 }

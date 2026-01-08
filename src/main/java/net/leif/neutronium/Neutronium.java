@@ -2,6 +2,7 @@ package net.leif.neutronium;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.leif.neutronium.block.ModBlocks;
 import net.leif.neutronium.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,5 +14,6 @@ public class Neutronium implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
