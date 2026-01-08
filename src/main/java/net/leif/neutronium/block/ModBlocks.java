@@ -1,10 +1,12 @@
 package net.leif.neutronium.block;
 
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.leif.neutronium.Neutronium;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -12,10 +14,15 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
-    private static final Block URANIUM_ORE = registerBlock("uranium_ore", new Block(AbstractBlock.Settings.create()
+    public static final Block URANIUM_ORE = registerBlock("uranium_ore", new Block(AbstractBlock.Settings.create()
             .strength(3f)
             .requiresTool()
             .sounds(BlockSoundGroup.STONE)
+    ));
+    public static final Block URANIUM_DEEPSLATE_ORE = registerBlock("uranium_deepslate_ore", new Block(AbstractBlock.Settings.create()
+            .strength(4f)
+            .requiresTool()
+            .sounds(BlockSoundGroup.DEEPSLATE)
     ));
 
 
@@ -31,5 +38,10 @@ public class ModBlocks {
 
     public static void registerModBlocks(){
         Neutronium.LOGGER.info("Registering items for " + Neutronium.MOD_ID);
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries ->{
+            entries.add(URANIUM_ORE);
+            entries.add(URANIUM_DEEPSLATE_ORE);
+        });
     }
 }

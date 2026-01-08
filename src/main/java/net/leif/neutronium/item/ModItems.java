@@ -10,9 +10,9 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    private static final Item RAW_URANIUM = registerItem("raw_uranium", new Item(new Item.Settings()));
-    private static final Item UNENRICHED_URANIUM = registerItem("unenriched_uranium", new Item(new Item.Settings()));
-    private static final Item ENRICHED_URANIUM = registerItem("enriched_uranium", new Item(new Item.Settings()));
+    public static final Item RAW_URANIUM = registerItem("raw_uranium", new Item(new Item.Settings()));
+    public static final Item UNENRICHED_URANIUM = registerItem("unenriched_uranium", new Item(new Item.Settings()));
+    public static final Item ENRICHED_URANIUM = registerItem("enriched_uranium", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(Neutronium.MOD_ID, name), item);

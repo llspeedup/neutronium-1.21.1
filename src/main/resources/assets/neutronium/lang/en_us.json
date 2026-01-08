@@ -3,5 +3,6 @@
   "item.neutronium.unenriched_uranium": "Unenriched Uranium",
   "item.neutronium.enriched_uranium": "Enriched Uranium",
 
-  "block.neutronium.uranium_ore": "Uranium Ore"
+  "block.neutronium.uranium_ore": "Uranium Ore",
+  "block.neutronium.uranium_deepslate_ore": "Deepslate Uranium Ore"
 }
