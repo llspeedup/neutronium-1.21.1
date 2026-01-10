@@ -2,6 +2,8 @@ package net.leif.neutronium.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.leif.neutronium.Neutronium;
+import net.leif.neutronium.block.custom.MagicBlock;
+import net.leif.neutronium.block.custom.TransformBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -24,7 +26,21 @@ public class ModBlocks {
             .requiresTool()
             .sounds(BlockSoundGroup.DEEPSLATE)
     ));
-
+    public static final Block BOOM_BLOCK = registerBlock("boom_block", new MagicBlock(AbstractBlock.Settings.create()
+            .strength(4f))
+    );
+    public static final Block UNENRICHED_URANIUM_BLOCK = registerBlock("unenriched_uranium_block", new Block(AbstractBlock.Settings.create()
+            .strength(4f)
+            .requiresTool()
+    ));
+    public static final Block ENRICHED_URANIUM_BLOCK = registerBlock("enriched_uranium_block", new Block(AbstractBlock.Settings.create()
+            .strength(4f)
+            .requiresTool()
+            .luminance(state -> 7)
+    ));
+    public static final Block TEMP_URANIUM_ENRICHER = registerBlock("temp_uranium_enricher", new TransformBlock(AbstractBlock.Settings.create()
+            .strength(3f)
+    ));
 
 
     private static void registerBlockItem(String name, Block block){
@@ -42,6 +58,9 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries ->{
             entries.add(URANIUM_ORE);
             entries.add(URANIUM_DEEPSLATE_ORE);
+            entries.add((UNENRICHED_URANIUM_BLOCK));
+            entries.add((ENRICHED_URANIUM_BLOCK));
+            entries.add((BOOM_BLOCK));
         });
     }
 }
