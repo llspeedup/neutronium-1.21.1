@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "neutronium:block/unenriched_uranium_block"
+    }
+  }
+}

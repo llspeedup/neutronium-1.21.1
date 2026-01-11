@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "neutronium:unenriched_uranium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "neutronium:unenriched_uranium"
+  }
+}

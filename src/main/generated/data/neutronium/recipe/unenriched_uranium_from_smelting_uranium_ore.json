@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "unenriched_uranium",
+  "ingredient": {
+    "item": "neutronium:uranium_ore"
+  },
+  "result": {
+    "id": "neutronium:unenriched_uranium"
+  }
+}

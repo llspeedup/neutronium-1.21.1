@@ -4,7 +4,11 @@
   "item.neutronium.enriched_uranium": "Enriched Uranium",
   "item.neutronium.wood_wand": "Wood Wand",
 
+  "itemgroup.neutronium.atomic_materials": "Atomic Materials",
+  "itemgroup:neutronium:mechanical_materials": "Mechanical Materials",
+
   "block.neutronium.uranium_ore": "Uranium Ore",
   "block.neutronium.uranium_deepslate_ore": "Deepslate Uranium Ore",
-  "block.neutronium.temp_uranium_enricher": "TEMP Uranium Enricher"
+  "block.neutronium.temp_uranium_enricher": "TEMP Uranium Enricher",
+  "block.neutronium.pedestal": "Pedestal"
 }
