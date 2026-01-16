@@ -24,6 +24,14 @@ public class PedestalBlockEntity extends BlockEntity implements ImplementedInven
         super(ModBlockEntities.PEDESTAL_BE, pos, state);
     }
 
+    public float getRenderRotation(){
+        rotation += 0.5f;
+        if(rotation >= 360f){
+            rotation = 0f;
+        }
+        return rotation;
+    }
+
     @Override
     public DefaultedList<ItemStack> getItems() {
         return inventory;
@@ -35,13 +43,7 @@ public class PedestalBlockEntity extends BlockEntity implements ImplementedInven
         Inventories.writeNbt(nbt, inventory, registryLookup);
     }
 
-    public float getRenderRotation(){
-       rotation += 0.5f;
-       if(rotation >= 360f){
-           rotation = 0f;
-       }
-       return rotation;
-    }
+
 
     @Override
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {

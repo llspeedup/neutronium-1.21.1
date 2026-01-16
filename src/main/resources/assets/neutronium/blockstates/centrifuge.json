@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=east,active=false": {
+      "model": "neutronium:block/centrifuge",
+      "y": 90
+    },
+    "facing=east,active=true": {
+      "model": "neutronium:block/centrifuge_on", "y": 90},
+    "facing=north,active=false": {
+      "model": "neutronium:block/centrifuge"},
+    "facing=north,active=true": {
+      "model": "neutronium:block/centrifuge_on"},
+    "facing=south,active=false": {
+      "model": "neutronium:block/centrifuge", "y": 180},
+    "facing=south,active=true": {
+      "model": "neutronium:block/centrifuge_on", "y": 180},
+    "facing=west,active=false": {
+      "model": "neutronium:block/centrifuge", "y": 270},
+    "facing=west,active=true": {
+      "model": "neutronium:block/centrifuge_on", "y": 270}
+  }
+}

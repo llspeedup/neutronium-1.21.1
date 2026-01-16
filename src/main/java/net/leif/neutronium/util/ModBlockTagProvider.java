@@ -19,11 +19,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.URANIUM_ORE)
                 .add(ModBlocks.URANIUM_DEEPSLATE_ORE)
                 .add(ModBlocks.ENRICHED_URANIUM_BLOCK)
-                .add(ModBlocks.UNENRICHED_URANIUM_BLOCK);
+                .add(ModBlocks.UNENRICHED_URANIUM_BLOCK)
+                .add(ModBlocks.CHROMIUM_ORE)
+                .add(ModBlocks.CHROMIUM_DEEPSLATE_ORE);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.URANIUM_ORE)
                 .add(ModBlocks.URANIUM_DEEPSLATE_ORE)
                 .add(ModBlocks.ENRICHED_URANIUM_BLOCK)
-                .add(ModBlocks.UNENRICHED_URANIUM_BLOCK);
+                .add(ModBlocks.UNENRICHED_URANIUM_BLOCK)
+                .add(ModBlocks.CHROMIUM_ORE)
+                .add(ModBlocks.CHROMIUM_DEEPSLATE_ORE);
     }
 }

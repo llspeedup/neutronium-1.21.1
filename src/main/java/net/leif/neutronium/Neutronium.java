@@ -6,6 +6,7 @@ import net.leif.neutronium.block.ModBlocks;
 import net.leif.neutronium.block.entity.ModBlockEntities;
 import net.leif.neutronium.item.ModItemGroups;
 import net.leif.neutronium.item.ModItems;
+import net.leif.neutronium.screen.ModScreenHandlers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,5 +20,6 @@ public class Neutronium implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerModItemGroups();
 		ModBlockEntities.registerModBlockEntities();
+		ModScreenHandlers.registerModScreenHandlers();
 	}
 }

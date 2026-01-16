@@ -2,9 +2,7 @@ package net.leif.neutronium.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.leif.neutronium.Neutronium;
-import net.leif.neutronium.block.custom.MagicBlock;
-import net.leif.neutronium.block.custom.PedestalBlock;
-import net.leif.neutronium.block.custom.TransformBlock;
+import net.leif.neutronium.block.custom.*;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -29,10 +27,7 @@ public class ModBlocks {
             .requiresTool()
             .sounds(BlockSoundGroup.DEEPSLATE)
     ));
-    public static final Block BOOM_BLOCK = registerBlock("boom_block",
-            new MagicBlock(AbstractBlock.Settings.create()
-            .strength(4f))
-    );
+
     public static final Block UNENRICHED_URANIUM_BLOCK = registerBlock("unenriched_uranium_block",
             new Block(AbstractBlock.Settings.create()
             .strength(4f)
@@ -44,13 +39,35 @@ public class ModBlocks {
             .requiresTool()
             .luminance(state -> 7)
     ));
+    public static final Block CHROMIUM_ORE = registerBlock("chromium_ore",
+            new Block(AbstractBlock.Settings.create()
+            .strength(3f)
+            .requiresTool()));
+    public static final Block CHROMIUM_DEEPSLATE_ORE = registerBlock("chromium_deepslate_ore",
+            new Block(AbstractBlock.Settings.create()
+            .strength(3f)
+            .requiresTool()
+    ));
+    public static final Block COBALT_BLOCK = registerBlock("cobalt",
+            new CobaltBlock(AbstractBlock.Settings.create()
+            .strength(3f)
+            .requiresTool()));
     public static final Block TEMP_URANIUM_ENRICHER = registerBlock("temp_uranium_enricher",
             new TransformBlock(AbstractBlock.Settings.create()
             .strength(3f)
     ));
+    public static final Block BOOM_BLOCK = registerBlock("boom_block",
+            new MagicBlock(AbstractBlock.Settings.create()
+                    .strength(4f))
+    );
     public static final Block PEDESTAL = registerBlock("pedestal",
             new PedestalBlock(AbstractBlock.Settings.create().
             nonOpaque()
+    ));
+    public static final Block CENTRIFUGE = registerBlock("centrifuge",
+            new CentrifugeBlock(AbstractBlock.Settings.create()
+            .sounds(BlockSoundGroup.METAL)
+            .nonOpaque()
     ));
 
 
@@ -69,9 +86,12 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries ->{
             entries.add(URANIUM_ORE);
             entries.add(URANIUM_DEEPSLATE_ORE);
-            entries.add((UNENRICHED_URANIUM_BLOCK));
+            entries.add(UNENRICHED_URANIUM_BLOCK);
             entries.add((ENRICHED_URANIUM_BLOCK));
-            entries.add((BOOM_BLOCK));
+            entries.add(BOOM_BLOCK);
+            entries.add(CHROMIUM_ORE);
+            entries.add(CHROMIUM_DEEPSLATE_ORE);
+            entries.add(COBALT_BLOCK);
         });
     }
 }

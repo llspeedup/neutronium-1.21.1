@@ -34,6 +34,14 @@ public class ModItemGroups {
                                 entries.add(ModItems.MOTOR);
                             })
                     .build());
+    public static final ItemGroup MACHINES = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(Neutronium.MOD_ID, "machines"), FabricItemGroup.builder()
+                    .icon(() -> new ItemStack(ModBlocks.CENTRIFUGE))
+                    .displayName(Text.translatable("itemgroup:neutronium:machines"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.CENTRIFUGE);
+                    })
+                    .build());
 
 
     public static void registerModItemGroups(){

@@ -3,6 +3,8 @@
     "neutronium:uranium_ore",
     "neutronium:uranium_deepslate_ore",
     "neutronium:enriched_uranium_block",
-    "neutronium:unenriched_uranium_block"
+    "neutronium:unenriched_uranium_block",
+    "neutronium:chromium_ore",
+    "neutronium:chromium_deepslate_ore"
   ]
 }

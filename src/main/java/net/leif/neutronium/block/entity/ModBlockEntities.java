@@ -3,6 +3,7 @@ package net.leif.neutronium.block.entity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.leif.neutronium.Neutronium;
 import net.leif.neutronium.block.ModBlocks;
+import net.leif.neutronium.block.entity.custom.CentrifugeBlockEntity;
 import net.leif.neutronium.block.entity.custom.PedestalBlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
@@ -16,6 +17,14 @@ public class ModBlockEntities {
                     Identifier.of(Neutronium.MOD_ID, "pedestal_be"),
                     FabricBlockEntityTypeBuilder
                             .create(PedestalBlockEntity::new, ModBlocks.PEDESTAL)
+                            .build()
+            );
+    public static final BlockEntityType<CentrifugeBlockEntity> CENTRIFUGE_BE =
+            Registry.register(
+                    Registries.BLOCK_ENTITY_TYPE,
+                    Identifier.of(Neutronium.MOD_ID, "centrifuge_be"),
+                    FabricBlockEntityTypeBuilder
+                            .create(CentrifugeBlockEntity::new, ModBlocks.CENTRIFUGE)
                             .build()
             );
 

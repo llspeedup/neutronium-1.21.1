@@ -1,5 +1,6 @@
 package net.leif.neutronium.util;
 
+import com.ibm.icu.text.Normalizer2;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.leif.neutronium.block.ModBlocks;
@@ -20,6 +21,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TEMP_URANIUM_ENRICHER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.UNENRICHED_URANIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENRICHED_URANIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHROMIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHROMIUM_DEEPSLATE_ORE);
     }
 
     @Override
@@ -27,6 +30,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_URANIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.UNENRICHED_URANIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENRICHED_URANIUM, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.RAW_CHROMIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHROMIUM_INGOT, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.WOOD_WAND, Models.GENERATED);
         itemModelGenerator.register(ModItems.ATOMIC_HAMMER, Models.GENERATED);

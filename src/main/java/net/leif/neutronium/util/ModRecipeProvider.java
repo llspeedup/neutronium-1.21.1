@@ -29,5 +29,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.UNENRICHED_URANIUM, RecipeCategory.MISC, ModBlocks.UNENRICHED_URANIUM_BLOCK);
         offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ENRICHED_URANIUM, RecipeCategory.MISC, ModBlocks.ENRICHED_URANIUM_BLOCK);
+
+        List<ItemConvertible> CHROMIUM_INGOT_SMELTABLES = List.of(
+                ModItems.RAW_CHROMIUM,
+                ModBlocks.CHROMIUM_ORE,
+                ModBlocks.CHROMIUM_DEEPSLATE_ORE);
+
+        offerSmelting(recipeExporter, CHROMIUM_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.CHROMIUM_INGOT, 0.25f, 200, "chromium_ingot");
+        offerBlasting(recipeExporter, CHROMIUM_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.CHROMIUM_INGOT, 0.25f, 100, "chromium_ingot");
     }
 }
