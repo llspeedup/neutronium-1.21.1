@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "chromium=false,gold=false": {
+      "model": "neutronium:block/cobalt"
+    },
+    "chromium=true,gold=false": {
+      "model": "neutronium:block/cobalt_with_chromium"
+    },
+    "chromium=false,gold=true": {
+      "model": "neutronium:block/cobalt_with_gold"
+    },
+    "chromium=true,gold=true": {
+      "model": "neutronium:block/cobalt_with_chromium_gold"
+    }
+  }
+}

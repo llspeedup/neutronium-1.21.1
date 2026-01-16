@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "neutronium:block/cobalt_textures/cobalt_with_chromium_top",
+    "bottom": "neutronium:block/cobalt_textures/cobalt",
+    "side": "neutronium:block/cobalt_textures/cobalt_with_chromium_gold_side"
+  }
+}
